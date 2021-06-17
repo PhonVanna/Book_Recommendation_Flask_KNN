@@ -1,0 +1,49 @@
+.form-group {
+    margin: 0 auto !important;
+}
+
+.form-select {
+    margin-top: 2%;
+}
+
+.btn {
+    margin-top: 2% !important;
+}
+
+.result-rec {
+    /* background-color: beige; */
+    padding: 3%;
+    width: 60%;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    text-align: left;
+    border-top-left-radius: 3px solid beige;
+}
+
+.result-rec ul {
+    list-style-type: none;
+}
+
+.result-rec ul li {
+    background-color: aquamarine;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 2%;
+    list-style-type: none;
+    border-radius: 25px;
+}
+
+.footer {
+   width: 100%;
+   padding: 20px;
+   background-color: bisque; 
+   bottom: 0 !important;
+   text-align: center;
+   position: fixed;
+   margin-top: 20px !important;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}

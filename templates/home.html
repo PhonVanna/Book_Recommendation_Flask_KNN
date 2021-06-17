@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Book Recommendation
+{% endblock %}
+
+{% block content %}
+    <div class="container text-center mt-3">
+        <h1>Book Recommendation - ML</h1>
+        <hr>
+        <h4>K-NEAREST NEIGHBOR ALGORITHM</h4>
+
+
+        <div class="container">
+            <form action="{{ url_for('home')}}" method="POST" class="mt-5">
+                    <div class="form-group w-50">
+                        <label for="ex1" class="title">Select A Book</label>
+                        <select class="form-select" aria-label="Default select example" name="content_id">
+                            <option selected>Select A Book</option>
+                            {% set count = [] %}
+                                {% for title in titles %}
+                                    <option value="{{count|length}}">
+                                        {{count|length}} {% set var = count.append(1) %} - {{ title }}
+                                    </option>
+                                {% endfor %}
+
+                        </select>
+                    </div>
+                <input type="submit" value="Check Recommendation" class="btn btn-primary">
+            </form>
+        </div>
+
+
+        <div class="container result-rec">
+            <h5>Recommendations For : {{ search_term }}</h5>
+            <ul class="mt-5">
+                {% for result in rec_result %}
+                    <li>{{ result }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+{% endblock %}
